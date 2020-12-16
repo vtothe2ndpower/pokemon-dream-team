@@ -1,19 +1,19 @@
 .Pokedex-cards {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 
-.Pokedex-winner{
-  color: green;
+.Pokedex {
+	text-align: center;
 }
 
-.Pokedex-loser{
-  color: red;
+.Pokedex h2 {
+	color: white;
+	font-weight: 400;
 }
 
-.Pokedex{
-  text-align: center;
+.Pokedex h4 {
+	color: white;
+	font-weight: 400;
 }
-
-
