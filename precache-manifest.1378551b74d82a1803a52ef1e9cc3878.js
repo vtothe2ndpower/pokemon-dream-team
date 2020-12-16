@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bef1e07104f58f39823adf99785ae15f",
+    "revision": "f491e149ce9f38f8d0595b525efb152e",
     "url": "/pokemon-dream-team/index.html"
   },
   {
