@@ -1,0 +1,23 @@
+.Navbar {
+	background: rgba(57, 57, 57, 1);
+	width: 100%;
+	padding: 1.5rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+.Navbar a {
+	text-decoration: none;
+	color: rgba(163, 163, 163, 1);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: 300;
+	transition: all 0.5s ease;
+}
+
+.Navbar a:hover {
+	text-decoration: underline;
+}
+
+.Navbar a.Navbar-active {
+	color: white;
+}
