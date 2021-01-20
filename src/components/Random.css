@@ -1,0 +1,18 @@
+.Random {
+	text-align: center;
+	color: white;
+}
+
+.Random h2 {
+	font-weight: 400;
+}
+
+/* .Random label {
+	margin: 3px auto;
+} */
+
+.Pokedex-cards {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
