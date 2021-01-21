@@ -9,7 +9,10 @@
 
 *Objectives*
 
-* Make Random Generator - Filter By Generation *
+* Make dynamic title styling function for handling that generation - use switch statement *
+* Finish any final styling, and naming tweaking *
 * Make Responsive for All Screen Sizes *
+* Organize/Clean Code, Understand All Code * 
 * Finalize README.md *
+* Host Final Version *
 * Add Gif to Portfolio Site * 

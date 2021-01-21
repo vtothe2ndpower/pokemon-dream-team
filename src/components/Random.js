@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Pokecard from './Pokecard';
+import Pokedex from './Pokedex';
 import './Random.css';
 
 class Random extends Component {
@@ -16,22 +16,19 @@ class Random extends Component {
     this.state = {
       gen: '',
       exp: 0,
-      pokemon: new Array(6)
-      // pokemon: [
-      //   { id: 181, name: 'Ampharos', type: 'Electric', base_experience: 510 },
-      //   { id: 208, name: 'Steelix', type: 'Steel/Ground', base_experience: 510 },
-      //   { id: 229, name: 'Houndoom', type: 'Dark/Fire', base_experience: 500 },
-      //   { id: 230, name: 'Kingdra', type: 'Water/Dragon', base_experience: 540 },
-      //   { id: 248, name: 'Tyranitar', type: 'Rock/Dark', base_experience: 600 },
-      //   { id: 160, name: 'Feraligatr', type: 'Water', base_experience: 530 }
-      // ]
+      pokemon: []
     };
 
+    this.capitalizeFirst = this.capitalizeFirst.bind(this);
     this.getRandomInt = this.getRandomInt.bind(this);
     this.generateArray = this.generateArray.bind(this);
     this.generateTeam = this.generateTeam.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  capitalizeFirst(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
   getRandomInt(min, max) {
@@ -50,37 +47,32 @@ class Random extends Component {
   }
 
   generateTeam() {
-    const { gen } = this.state;
+    const { gen } = this.state; // Determines the gen as a string
     if (gen === '') return alert('Please enter a generation!');
 
-    // console.log('Generate Team Button Clicked!');
-    // console.log(this.props[gen]);
-    console.log(this.generateArray(this.props[gen]));
-    const partyArr = this.generateArray(this.props[gen]);
+    const partyArr = this.generateArray(this.props[gen]); // Makes party for that gen range
 
-    console.log()
+    console.log(partyArr);
 
     // Time to make a request
-    // partyArr.forEach(id => (
-    //   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     console.log(data);
-    //     this.setState({
-    //       pokemon: ...this.state.pokemon, { id, name: type: base_experience}
-    //     });
-    //   })
-    // ));
+    partyArr.forEach(num => (
+      fetch(`https://pokeapi.co/api/v2/pokemon/${num}`)
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        this.setState(curState => ({
+          pokemon: [...this.state.pokemon, { 
+            id: num,
+            name: this.capitalizeFirst(data.name),
+            type: data.types.length > 1 ? `${this.capitalizeFirst(data.types[0].type.name)}/${this.capitalizeFirst(data.types[1].type.name)}` : `${this.capitalizeFirst(data.types[0].type.name)}`,
+            base_experience: data.base_experience
+          }]
+        }));
+      })
+    ));
 
-    // id (comes from array)
-    // name (Set first letter capital)
+    console.log(this.state.pokemon); 
     // base_exp - check that these are accurate
-    // types (get - if more than 1 seperate with a / )
-
-    // Add Up EXP
-    // let hand = [ ...this.state.pokemon ];
-		// let exp = hand.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
-
   }
 
   handleClick(e) {
@@ -89,12 +81,18 @@ class Random extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
+    this.setState({ pokemon: [] });
     this.generateTeam();
   }
 
 
   render() {
+    // Add Up Total Exp
+    let hand = [ ...this.state.pokemon ];
+    let exp = hand.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
+    // let title = switch(this.state.gen) {
+
+    // }
     return (
       <div className="Random">
         <h2>Generate Your Own Random Pokemon Here</h2>
@@ -113,20 +111,15 @@ class Random extends Component {
           <input type="radio" id="genMixed" name="generation" value="genMixed" onClick={this.handleClick} />
           <label htmlFor="genMixed">Mixed Generations (All Regions)</label><br/>
 
-          <button>Generate Random Team</button>
+          <button>Generate Team</button>
         </form>
 
-        <h2>{this.state.gen}</h2>
-				<h4>Total Experience: {this.state.exp}</h4>
-				<div className="Random-cards">
-					{this.state.pokemon.map((p) => (
-						<Pokecard id={p.id} name={p.name} type={p.type} exp={p.base_experience} />
-					))}
-        </div>
-
+        <Pokedex pokemon={hand} exp={exp} gen="Random Party" />
       </div>
     )
   }
 }
 
 export default Random;
+
+
