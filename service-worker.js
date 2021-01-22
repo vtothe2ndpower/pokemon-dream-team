@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pokemon-dream-team/precache-manifest.6418336caff68204cc7d35fa1857e464.js"
+  "/pokemon-dream-team/precache-manifest.63c3e2cd91ae1459406d8d52d9589b88.js"
 );
 
 self.addEventListener('message', (event) => {

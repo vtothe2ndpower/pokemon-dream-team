@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/pokemon-dream-team/static/css/main.1e8b3558.chunk.css",
-    "main.js": "/pokemon-dream-team/static/js/main.37cffb9d.chunk.js",
-    "main.js.map": "/pokemon-dream-team/static/js/main.37cffb9d.chunk.js.map",
+    "main.js": "/pokemon-dream-team/static/js/main.0981605b.chunk.js",
+    "main.js.map": "/pokemon-dream-team/static/js/main.0981605b.chunk.js.map",
     "runtime-main.js": "/pokemon-dream-team/static/js/runtime-main.d1ef22ed.js",
     "runtime-main.js.map": "/pokemon-dream-team/static/js/runtime-main.d1ef22ed.js.map",
-    "static/js/2.bde965c4.chunk.js": "/pokemon-dream-team/static/js/2.bde965c4.chunk.js",
-    "static/js/2.bde965c4.chunk.js.map": "/pokemon-dream-team/static/js/2.bde965c4.chunk.js.map",
+    "static/js/2.2c7e728b.chunk.js": "/pokemon-dream-team/static/js/2.2c7e728b.chunk.js",
+    "static/js/2.2c7e728b.chunk.js.map": "/pokemon-dream-team/static/js/2.2c7e728b.chunk.js.map",
     "index.html": "/pokemon-dream-team/index.html",
-    "precache-manifest.6418336caff68204cc7d35fa1857e464.js": "/pokemon-dream-team/precache-manifest.6418336caff68204cc7d35fa1857e464.js",
+    "precache-manifest.63c3e2cd91ae1459406d8d52d9589b88.js": "/pokemon-dream-team/precache-manifest.63c3e2cd91ae1459406d8d52d9589b88.js",
     "service-worker.js": "/pokemon-dream-team/service-worker.js",
     "static/css/main.1e8b3558.chunk.css.map": "/pokemon-dream-team/static/css/main.1e8b3558.chunk.css.map",
-    "static/js/2.bde965c4.chunk.js.LICENSE.txt": "/pokemon-dream-team/static/js/2.bde965c4.chunk.js.LICENSE.txt"
+    "static/js/2.2c7e728b.chunk.js.LICENSE.txt": "/pokemon-dream-team/static/js/2.2c7e728b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d1ef22ed.js",
-    "static/js/2.bde965c4.chunk.js",
+    "static/js/2.2c7e728b.chunk.js",
     "static/css/main.1e8b3558.chunk.css",
-    "static/js/main.37cffb9d.chunk.js"
+    "static/js/main.0981605b.chunk.js"
   ]
 }
