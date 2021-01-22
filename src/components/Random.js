@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import Pokedex from './Pokedex';
 import './Random.css';
 
+const genName = {
+  gen1: 'Generation 1',
+  gen2: 'Generation 2',
+  gen3: 'Generation 3',
+  genMixed: 'Mixed Generations'
+};
+
 class Random extends Component {
   static defaultProps = {
     gen1: [1, 151], // Generation 1: 1-151
@@ -39,9 +46,15 @@ class Random extends Component {
 
   generateArray(arr) {
     const [min, max] = arr;
-    let partyArr = [];
+    let partyArr = []; 
+    let randInt;
     for(let i = 0; i < 6; i++) {
-      partyArr.push(this.getRandomInt(min, max));
+      randInt = this.getRandomInt(min, max);
+      // We don't have multiple of the same pokemon in our party
+      while (randInt in partyArr) {
+        randInt = this.getRandomInt(min, max);
+      }
+      partyArr.push(randInt);
     }
     return partyArr;
   }
@@ -90,9 +103,7 @@ class Random extends Component {
     // Add Up Total Exp
     let hand = [ ...this.state.pokemon ];
     let exp = hand.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
-    // let title = switch(this.state.gen) {
-
-    // }
+    let title = genName[this.state.gen] || '';
     return (
       <div className="Random">
         <h2>Generate Your Own Random Pokemon Here</h2>
@@ -114,7 +125,7 @@ class Random extends Component {
           <button>Generate Team</button>
         </form>
 
-        <Pokedex pokemon={hand} exp={exp} gen="Random Party" />
+        <Pokedex pokemon={hand} exp={exp} gen={`Random Party - ${title}`} />
       </div>
     )
   }

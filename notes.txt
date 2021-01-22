@@ -1,0 +1,14 @@
+*Other Objectives*
+
+<!-- * Make dynamic title styling function for handling that generation - use switch statement * -->
+<!-- * Prevent duplicated in parties? * -->
+<!-- * Style the button better * -->
+* Finish any final styling, and naming tweaking *
+* Style that alert button a litter button! * 
+* Add Hamburger Menu - Make Responsive for All *
+* Organize/Clean Code, Understand All Code * 
+* Finalize README.md *
+* Host Final Version *
+* Add Gif to Portfolio Site * 
+* Card dealing? * 
+* Loading screen gif? *

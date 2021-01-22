@@ -1,18 +1,5 @@
 # Pokemon Dream Team
+Check out what my favorite Pokémon were while growing up. Make sure to have a look at the random party maker generator tab as well to create your own dream team.
 
-## Generation 1
-## Generation 2
-## Generation 3
-## Generations 1-3
+* Technologies Used: React, React Router, External APIs  *
 
-## Random Party Maker
-
-*Objectives*
-
-* Make dynamic title styling function for handling that generation - use switch statement *
-* Finish any final styling, and naming tweaking *
-* Make Responsive for All Screen Sizes *
-* Organize/Clean Code, Understand All Code * 
-* Finalize README.md *
-* Host Final Version *
-* Add Gif to Portfolio Site * 
