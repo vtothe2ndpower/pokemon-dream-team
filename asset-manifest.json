@@ -1,22 +1,23 @@
 {
   "files": {
     "main.css": "/pokemon-dream-team/static/css/main.1e8b3558.chunk.css",
-    "main.js": "/pokemon-dream-team/static/js/main.0981605b.chunk.js",
-    "main.js.map": "/pokemon-dream-team/static/js/main.0981605b.chunk.js.map",
+    "main.js": "/pokemon-dream-team/static/js/main.21c61a00.chunk.js",
+    "main.js.map": "/pokemon-dream-team/static/js/main.21c61a00.chunk.js.map",
     "runtime-main.js": "/pokemon-dream-team/static/js/runtime-main.d1ef22ed.js",
     "runtime-main.js.map": "/pokemon-dream-team/static/js/runtime-main.d1ef22ed.js.map",
-    "static/js/2.2c7e728b.chunk.js": "/pokemon-dream-team/static/js/2.2c7e728b.chunk.js",
-    "static/js/2.2c7e728b.chunk.js.map": "/pokemon-dream-team/static/js/2.2c7e728b.chunk.js.map",
+    "static/js/2.53646f24.chunk.js": "/pokemon-dream-team/static/js/2.53646f24.chunk.js",
+    "static/js/2.53646f24.chunk.js.map": "/pokemon-dream-team/static/js/2.53646f24.chunk.js.map",
     "index.html": "/pokemon-dream-team/index.html",
-    "precache-manifest.63c3e2cd91ae1459406d8d52d9589b88.js": "/pokemon-dream-team/precache-manifest.63c3e2cd91ae1459406d8d52d9589b88.js",
+    "precache-manifest.a4066351e0509d95c4d38e7147e92867.js": "/pokemon-dream-team/precache-manifest.a4066351e0509d95c4d38e7147e92867.js",
     "service-worker.js": "/pokemon-dream-team/service-worker.js",
     "static/css/main.1e8b3558.chunk.css.map": "/pokemon-dream-team/static/css/main.1e8b3558.chunk.css.map",
-    "static/js/2.2c7e728b.chunk.js.LICENSE.txt": "/pokemon-dream-team/static/js/2.2c7e728b.chunk.js.LICENSE.txt"
+    "static/js/2.53646f24.chunk.js.LICENSE.txt": "/pokemon-dream-team/static/js/2.53646f24.chunk.js.LICENSE.txt",
+    "static/media/ash.jpg": "/pokemon-dream-team/static/media/ash.322f5c8a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.d1ef22ed.js",
-    "static/js/2.2c7e728b.chunk.js",
+    "static/js/2.53646f24.chunk.js",
     "static/css/main.1e8b3558.chunk.css",
-    "static/js/main.0981605b.chunk.js"
+    "static/js/main.21c61a00.chunk.js"
   ]
 }
