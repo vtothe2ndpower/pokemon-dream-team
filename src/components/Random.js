@@ -48,13 +48,10 @@ class Random extends Component {
     const [min, max] = arr;
     let partyArr = []; 
     let randInt;
-    for(let i = 0; i < 6; i++) {
+    while(partyArr.length < 6) {
       randInt = this.getRandomInt(min, max);
       // We don't have multiple of the same pokemon in our party
-      while (randInt in partyArr) {
-        randInt = this.getRandomInt(min, max);
-      }
-      partyArr.push(randInt);
+      if(partyArr.indexOf(randInt) === -1) partyArr.push(randInt);
     }
     return partyArr;
   }
@@ -65,14 +62,11 @@ class Random extends Component {
 
     const partyArr = this.generateArray(this.props[gen]); // Makes party for that gen range
 
-    console.log(partyArr);
-
     // Time to make a request
     partyArr.forEach(num => (
       fetch(`https://pokeapi.co/api/v2/pokemon/${num}`)
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         this.setState(curState => ({
           pokemon: [...this.state.pokemon, { 
             id: num,
@@ -83,8 +77,6 @@ class Random extends Component {
         }));
       })
     ));
-
-    console.log(this.state.pokemon); 
     // base_exp - check that these are accurate
   }
 

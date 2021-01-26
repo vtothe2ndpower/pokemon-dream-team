@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import Message from './Message';
 import './Home.css';
 import ash from '../ash.jpg';
