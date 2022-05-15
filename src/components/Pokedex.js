@@ -5,12 +5,18 @@ import './Pokedex.css';
 class Pokedex extends Component {
 	render() {
 		return (
-			<div className="Pokedex">
+			<div className='Pokedex'>
 				<h2>{this.props.gen}</h2>
 				<h4>Total Experience: {this.props.exp}</h4>
-				<div className="Pokedex-cards">
+				<div className='Pokedex-cards'>
 					{this.props.pokemon.map((p) => (
-						<Pokecard key={p.id} id={p.id} name={p.name} type={p.type} exp={p.base_experience} />
+						<Pokecard
+							exp={p.base_experience}
+							id={p.id}
+							key={p.id}
+							name={p.name}
+							type={p.type}
+						/>
 					))}
 				</div>
 			</div>

@@ -59,39 +59,55 @@ class App extends Component {
 		let exp4 = hand4.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
 
 		return (
-			<div className="App">
+			<div className='App'>
 				<Navbar />
 				<Switch>
-					<Route exact path="/" component={Home} />
-					<Route 
-						exact path="/gen1" 
+					<Route
+						component={Home}
+						exact
+						path='/'
+					/>
+
+					<Route
+						exact
+						path='/gen1'
 						render={(props) => (
-    					<Pokedex pokemon={hand1} exp={exp1} gen="Generation 1" />
-  					)} 
+							<Pokedex exp={exp1} gen='Generation 1' pokemon={hand1} />
+						)}
 					/>
-					<Route 
-						exact path="/gen2" 
+
+					<Route
+						exact
+						path='/gen2'
 						render={(props) => (
-    					<Pokedex pokemon={hand2} exp={exp2} gen="Generation 2" />
-  					)} 
+							<Pokedex exp={exp2} gen='Generation 2' pokemon={hand2} />
+						)}
 					/>
-					<Route 
-						exact path="/gen3" 
+
+					<Route
+						exact
+						path='/gen3'
 						render={(props) => (
-    					<Pokedex pokemon={hand3} exp={exp3} gen="Generation 3" />
-  					)} 
+							<Pokedex exp={exp3} gen='Generation 3' pokemon={hand3} />
+						)}
 					/>
-					<Route 
-						exact path="/gen-mixed" 
+
+					<Route
+						exact
+						path='/gen-mixed'
 						render={(props) => (
-    					<Pokedex pokemon={hand4} exp={exp4} gen="Mixed Generations" />
-  					)} 
+							<Pokedex pokemon={hand4} exp={exp4} gen='Mixed Generations' />
+						)}
 					/>
-					<Route 
-						exact path="/random-team" 
-						component={Random} 
+
+					<Route
+						exact
+						path='/random-team'
+						component={Random}
 					/>
-          <Route render={() => <NotFound />} />
+
+					<Route render={() => <NotFound />} />
+
 				</Switch>
 			</div>
 		);
